@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="500px" title="Test Mod" draggable="true" closable="false">
+  <label id="modLabel" text="Test Mod Description" />
+</dialog>
