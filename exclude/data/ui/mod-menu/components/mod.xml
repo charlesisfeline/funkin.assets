@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<collapsible-dialog id="modDialog" width="100" title="Test Mod" draggable="true" closable="false">
-  <label id="modLabel" width="100%" text="Test Mod Description" />
-</collapsible-dialog>
+<vbox width="300" height="30" styleName="modBox">
+  <label id="modLabel" width="100%" text="Test Mod" textAlign="center" paddingTop="7" />
+</vbox>
