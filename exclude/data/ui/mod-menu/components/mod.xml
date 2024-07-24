@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vbox width="300" height="30" styleName="modBox">
+<vbox width="100%" height="30" styleName="modBox">
   <label id="modLabel" width="100%" text="Test Mod" textAlign="center" paddingTop="7" />
 </vbox>
