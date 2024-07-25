@@ -7,8 +7,8 @@
     }
   </style>
   <menu text="File" horizontalAlign="right">
-    <menu-item id="menubarItemImportMod" text="Import Mod" shortcutText="Ctrl+I" />
-    <menu-separator />
     <menu-item id="menubarItemReloadMods" text="Reload Mods" shortcutText="Ctrl+R" />
+    <menu-separator />
+    <menu-item id="menubarItemQuit" text="Quit" shortcutText="Ctrl+Q" />
   </menu>
 </menubar>
