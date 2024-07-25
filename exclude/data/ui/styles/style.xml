@@ -141,9 +141,5 @@
 		background-color: #484848;
 		cursor: pointer;
 		}
-		.modBox:down {
-		background-color: #484848;
-		cursor: grabbing;
-		}
 	</style>
 </box>
