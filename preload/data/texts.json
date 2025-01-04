@@ -1,0 +1,101 @@
+{
+  "title": {
+    "randomTextSplitter": "--",
+    "texts": [
+      {
+        "beat": 1,
+        "texts": ["The", "Funkin Crew Inc"],
+        "command": "show-text"
+      },
+      {
+        "beat": 3,
+        "texts": ["presents"],
+        "command": "append-text"
+      },
+      {
+        "beat": 4,
+        "command": "clear-text"
+      },
+      {
+        "beat": 5,
+        "texts": ["In association", "with"],
+        "command": "show-text"
+      },
+      {
+        "beat": 7,
+        "texts": ["newgrounds"],
+        "command": "append-text"
+      },
+      {
+        "beat": 7,
+        "command": "show-logo"
+      },
+      {
+        "beat": 8,
+        "command": "clear-text"
+      },
+      {
+        "beat": 8,
+        "command": "hide-logo"
+      },
+      {
+        "beat": 9,
+        "randomText": 0,
+        "command": "show-text"
+      },
+      {
+        "beat": 11,
+        "randomText": 1,
+        "command": "append-text"
+      },
+      {
+        "beat": 12,
+        "command": "clear-text"
+      },
+      {
+        "beat": 13,
+        "texts": ["Friday"],
+        "command": "show-text"
+      },
+      {
+        "beat": 14,
+        "texts": ["Night"],
+        "command": "append-text"
+      },
+      {
+        "beat": 15,
+        "texts": ["Funkin"],
+        "command": "append-text"
+      },
+      {
+        "beat": 16,
+        "command": "finish-intro"
+      }
+    ]
+  },
+  "freeplay": {
+    "title": "FREEPLAY",
+    "ostText": "üöäß",
+    "charSelectHint:": "Press [ $value ] to change characters"
+  },
+  "options": {
+    "preferences": {
+      "tabName": "PREFERENCES",
+      "naughtyness": "Naughtyness",
+      "downscroll": "Downscroll",
+      "flashing": "Flashing Lights",
+      "camZoom": "Camera Zooming on Beat",
+      "debug": "Debug Display",
+      "autoPause": "Auto Pause",
+      "unlockedFramerate": "Unlocked Framerate",
+      "fps": "FPS"
+    },
+    "controls": {
+      "tabName": "CONTROLS"
+    },
+    "inputOffsets": {
+      "tabName": "INPUT OFFSETS"
+    },
+    "exit": "EXIT"
+  }
+}
