@@ -75,8 +75,8 @@
   },
   "freeplay": {
     "title": "FREEPLAY",
-    "ostText": "üöäß",
-    "charSelectHint:": "Press [ $value ] to change characters"
+    "ost": "OFFICIAL OST",
+    "charSelectHint:": "Press [ ${value} ] to change characters"
   },
   "options": {
     "preferences": {
@@ -94,8 +94,48 @@
       "tabName": "CONTROLS"
     },
     "inputOffsets": {
-      "tabName": "INPUT OFFSETS"
+      "tabName": "INPUT OFFSETS",
+      "visualOffset": "Visual Offset: ${value}ms",
+      "helpText1": "You can press SPACE+Left/Right to change this value.",
+      "helpText2": "You can hold SHIFT to step 1ms at a time.",
+      "helpText3": "Press BACK to return to main menu.",
+      "inputOffset": "INPUT Offset (Left/Right to change): ${value}ms",
+      "estimate": "Estimated average input offset needed: ${value}"
     },
     "exit": "EXIT"
+  },
+  "game": {
+    "score": "Score: ${value}",
+    "scoreBotplay": "Bot Play Enabled",
+    "songResults": "${value1} by ${value2}",
+    "weekResults": "${value}",
+    "pause": {
+      "songResume": "Resume",
+      "songRestart": "Restart Song",
+      "songDiffChange": "Change Difficulty",
+      "songPracticeEnable": "Enable Practice Mode",
+      "songExitMain": "Exit to Menu",
+      "songExitChart": "Return to Chart Editor",
+      "cutsceneResume": "Resume",
+      "cutsceneSkip": "Skip Cutscene",
+      "cutsceneRestart": "Restart Cutscene",
+      "dialogueResume": "Resume",
+      "dialogueSkip": "Skip Dialogue",
+      "dialogueRestart": "Restart Dialogue",
+      "difficultyBack": "Back",
+
+      "artist": "Artist: ${value}",
+      "charter": "Charter: ${value}",
+      "difficulty": "Difficulty: ${value}",
+      "deaths": "${value} Blue Balls",
+      "practice": "PRACTICE MODE",
+      "chartPreview": "Chart Editor Preview",
+      "cutscenePaused": "Video Paused",
+      "dialoguePaused": "Dialogue Paused"
+    }
+  },
+  "story": {
+    "tracks": "TRACKS",
+    "score": "LEVEL SCORE: ${value}"
   }
 }
