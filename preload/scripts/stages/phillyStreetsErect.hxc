@@ -182,6 +182,11 @@ class PhillyStreetsErectStage extends Stage
 
 		colorShader = new AdjustColorShader();
 
+		colorShader.hue = -5;
+		colorShader.saturation = -40;
+		colorShader.contrast = -25;
+		colorShader.brightness = -20;
+
 		mist0 = new FlxBackdrop(Paths.image('phillyStreets/erect/mistMid'), 0x01);
 		mist0.setPosition(-650, -100);
 		mist0.scrollFactor.set(1.2, 1.2);
@@ -480,23 +485,15 @@ class PhillyStreetsErectStage extends Stage
 		// mist5.y = -450 + (Math.sin(_timer*0.2)*1xxx50);
 		//trace(mist1.y);
 
-		var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0, rainShaderStartIntensity, rainShaderEndIntensity);
+		var remappedIntensityValue:Float = rainShaderStartIntensity;
+		if (FlxG.sound.music != null) {
+			remappedIntensityValue = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music.length, rainShaderStartIntensity, rainShaderEndIntensity);
+		}
 		rainShader.intensity = remappedIntensityValue;
 		rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
 		rainShader.update(event.elapsed);
 
 		if(scrollingSky != null) scrollingSky.scrollX -= FlxG.elapsed * 22;
-
-		if(PlayState.instance.currentStage.getBoyfriend() != null && PlayState.instance.currentStage.getBoyfriend().shader == null){
-      PlayState.instance.currentStage.getBoyfriend().shader = colorShader;
-		  PlayState.instance.currentStage.getGirlfriend().shader = colorShader;
-		  PlayState.instance.currentStage.getDad().shader = colorShader;
-
-		  colorShader.hue = -5;
-		  colorShader.saturation = -40;
-		  colorShader.contrast = -25;
-		  colorShader.brightness = -20;
-    }
 
 		// if (rainSndAmbience != null) {
 		// 	rainSndAmbience.volume = Math.min(0.3, remappedIntensityValue * 2);
@@ -648,5 +645,7 @@ class PhillyStreetsErectStage extends Stage
 		super.addCharacter(character, charType);
 		// add to the mask so that characters hide puddles
 		// frameBufferMan.copySpriteTo("mask", character, 0x000000);
+		trace('Applied stage shader to ' + character.characterName);
+		character.shader = colorShader;
 	}
 }

@@ -109,6 +109,7 @@ class PicoPlayerCharacter extends MultiSparrowCharacter {
 			if (GameOverSubState.blueBallSuffix == '-pico-explode') {
 				// Explosion death animation.
 				doExplosionDeath();
+				return; // Don't play the stab death animation, sure, pico is set as invisible, but still good to do this
 			} else {
 				// Standard death animation.
 				createDeathSprites();
@@ -196,7 +197,7 @@ class PicoPlayerCharacter extends MultiSparrowCharacter {
 		picoDeathExplosion = new FlxAtlasSprite(this.x - 640, this.y - 340, picoDeathExplosionPath);
     PlayState.instance.subState.add(picoDeathExplosion);
 		picoDeathExplosion.zIndex = 1000;
-    picoDeathExplosion.onAnimationFinish.add(onExplosionFinishAnim);
+    picoDeathExplosion.onAnimationComplete.add(onExplosionFinishAnim);
     picoDeathExplosion.visible = true;
 		this.visible = false;
 
@@ -243,7 +244,6 @@ class PicoPlayerCharacter extends MultiSparrowCharacter {
 		clearCasings();
 
 		// Reset to standard death animation.
-		GameOverSubState.musicSuffix = '-pico';
 		GameOverSubState.blueBallSuffix = '-pico';
 
 		PauseSubState.musicSuffix = '-pico';
@@ -256,16 +256,19 @@ class PicoPlayerCharacter extends MultiSparrowCharacter {
 		super.onAnimationFrame(name, frameNumber, frameIndex);
 
 		if (name == "firstDeath" && frameNumber == 36 - 1) {
-			deathSpriteRetry.animation.play('idle');
-			deathSpriteRetry.visible = true;
+			if (deathSpriteRetry != null) {
+				deathSpriteRetry.animation.play('idle');
+				deathSpriteRetry.visible = true;
+				deathSpriteRetry.x = this.x + 195;
+				deathSpriteRetry.y = this.y - 70;
+			}
 			GameOverSubState.instance.startDeathMusic(1.0, false);
+			// set the game over music to the default to make it loop properly
+			GameOverSubState.musicSuffix = '-pico';
 			// force the deathloop to play in here, since we are starting the music early it
 			// doesn't check this in gameover substate !
 			// also no animation suffix 🤔
 			GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
-
-			deathSpriteRetry.x = this.x + 195;
-			deathSpriteRetry.y = this.y - 70;
 		}
 
 		if (name == "cock" && frameNumber == 3) {
