@@ -1,0 +1,14 @@
+import funkin.ui.story.Level;
+import funkin.save.Save;
+
+class Week7Level extends Level
+{
+	function new()
+	{
+		super('week7');
+	}
+
+  override function isUnlocked():Bool {
+    return Save.instance.hasBeatenLevel('week6');
+  }
+}

@@ -9,7 +9,7 @@ class Weekend1Level extends Level
 	}
 
   override function isUnlocked():Bool {
-    return true;
+    return Save.instance.hasBeatenLevel('week7');
   }
 
   override function getSongDisplayNames(difficultyId:String):Array<String> {
