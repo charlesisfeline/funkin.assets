@@ -34,7 +34,7 @@
 
 							<vbox id="pattern">
 								<image resource="images/hold-note.png" imageScale="0.5"/>
-								<label id="img-desc" width="100%" text="hold/long note"/>
+								<label id="img-desc" width="100%" text="Hold Note"/>
 							</vbox>
 
 							<vbox id="pattern">
