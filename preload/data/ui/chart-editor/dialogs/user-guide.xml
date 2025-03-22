@@ -186,7 +186,7 @@
 
 				<vbox width="100%" style="padding-top:10px;">
 					<section-header text="Common Patterns From Left To Right" id="heading" />
-					
+
 					<scrollview width="950" height="330" scrollMode="default">
 						<grid columns="7" style="padding: 5px;" contentWidth="100%">
 
@@ -234,7 +234,7 @@
 								<image resource="images/patterns/one-handed-trills.png" imageScale="0.5"/>
 								<label id="img-desc" width="100%" text="One-handed trills"/>
 							</vbox>
-							
+
 							<vbox id="pattern">
 								<image resource="images/patterns/two-handed-trills.png" imageScale="0.5"/>
 								<label id="img-desc" width="100%" text="Two-handed trills"/>

@@ -5,8 +5,8 @@
         <vbox>
             <dropdown id="swapper" width="250" allowFocus="true">
                 <data>
-                    <item curView="SPRITESHEET" text="SPRITESHEET" />
-                    <item curView="ANIMATIONS" text="ANIMATIONS" />
+                    <item curView="SPRITESHEET" text="Spritesheet" />
+                    <item curView="ANIMATIONS" text="Animations" />
                 </data>
             </dropdown>
         </vbox>
@@ -31,9 +31,9 @@
                 <label text="Q/[: Previous Animation" />
                 <label text="E/]: Next Animation" />
                 <label text="ENTER: Replay Animation" />
-                <label text="SPACE: Play idle Animation" />
-                <label text="WASD: Play sing Animation" />
-                <label text="F: Toggle Onion Skin" />
+                <label text="SPACE: Play Idle Animation" />
+                <label text="WASD: Play Sing Animation" />
+                <label text="F: Toggle Onion Skinning" />
                 <label text="ARROWS: Nudge Offsets by 5" />
                 <label text="SHIFT+ARROWS: Nudge Offsets by 10" />
                 <label text="CTRL+ARROWS: Nudge Offsets by 1" />

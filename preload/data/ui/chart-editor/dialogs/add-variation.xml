@@ -46,7 +46,7 @@
 						<validator type="required" />
 						<data>
 							<item id="bf" text="Boyfriend" />
-							<item id="pico-playable" text="Pico (Darnell)" />
+							<item id="pico-playable" text="Pico (Playable)" />
 						</data>
 					</dropdown>
 					<label text="Opponent Character:" verticalAlign="center" horizontalAlign="right" />
