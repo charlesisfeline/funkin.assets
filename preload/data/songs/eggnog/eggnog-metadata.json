@@ -18,7 +18,10 @@
     "noteStyle": "funkin",
     "album": "volume1",
     "previewStart": 0,
-    "previewEnd": 15000
+    "previewEnd": 15000,
+    "freeplayIcon": {
+      "offsets": [40, 0]
+    }
   },
   "songName": "Eggnog",
   "timeChanges": [{ "d": 4, "n": 4, "t": -1, "bt": [4, 4, 4, 4], "bpm": 150 }],
