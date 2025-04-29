@@ -53,6 +53,12 @@ class PhillyTrainErectStage extends Stage
 		explode = true;
   }
 
+	override function onSongRetry(event:SongRetryEvent) {
+		super.onSongRetry(event);
+
+		if(bloodPool != null) bloodPool.scriptCall('resetMatrix');
+	}
+
 	public override function onCountdownStart(event:CountdownScriptEvent):Void {
 		super.onCountdownStart(event);
 
@@ -63,8 +69,6 @@ class PhillyTrainErectStage extends Stage
       hasPlayedInGameCutscene = true;
 
       event.cancel(); // CANCEL THE COUNTDOWN!
-
-
 
       PlayState.instance.camHUD.visible = false;
       doppleGangerCutscene();
@@ -89,6 +93,8 @@ class PhillyTrainErectStage extends Stage
 	var cutsceneTimerManager:FlxTimerManager;
 
 	function doppleGangerCutscene(){
+    // Disable player input during cutscene, so you can't get a gameover during cutscene
+		PlayState.instance.isInCutscene = true;
 
 		skipText = new FlxText(936, 618, 0, 'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
     skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);

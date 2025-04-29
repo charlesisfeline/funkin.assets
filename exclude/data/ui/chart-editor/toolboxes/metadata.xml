@@ -50,7 +50,7 @@
         <frame text="Difficulty: Normal" width="100%" height="170" id="frameDifficulty">
             <grid columns="2">
                 <label text="Starting BPM" verticalAlign="center" />
-                <number-stepper id="inputBPM" pos="100" step="1" min="10" max="500" precision="1" horizontalAlign="right" tooltip="Adjust the BPM of the song, which helps align the grid and character animations to the music." />
+                <number-stepper id="inputBPM" pos="100" step="1" min="10" max="9999" precision="1" horizontalAlign="right" tooltip="Adjust the BPM of the song, which helps align the grid and character animations to the music." />
                 <label text="Starting Time Signature" verticalAlign="center" />
                 <dropdown id="inputTimeSignature" value="4/4" horizontalAlign="right" tooltip="Adjust the time signature of the song, which helps align the grid.">
                     <data>
