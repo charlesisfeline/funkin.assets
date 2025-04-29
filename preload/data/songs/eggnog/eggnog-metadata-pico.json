@@ -14,13 +14,10 @@
     },
     "stage": "mallXmasErect",
     "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 2, "hard": 2 },
-    "album": "expansion2",
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "album": "volume4",
     "previewStart": 0,
-    "previewEnd": 15000,
-    "freeplayIcon": {
-      "offsets": [40, 0]
-    }
+    "previewEnd": 15000
   },
   "generatedBy": "Friday Night Funkin' - v0.5.0 (rewrite/master:7cd19a0) PROTOTYPE",
   "timeFormat": "ms",

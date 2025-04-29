@@ -39,11 +39,6 @@
     <menu-item id="menubarItemSelectBeforeCursor" text="Select Before Cursor" shortcutText="Shift+Home" disabled="true" />
     <menu-item id="menubarItemSelectAfterCursor" text="Select After Cursor" shortcutText="Shift+End" disabled="true" />
     <menu-separator />
-    <hbox style="padding-left: 12px" width="100%">
-      <label text="Note Stack Threshold" styleName="menuLabel" verticalAlign="center" horizontalAlign="left"/>
-      <number-stepper id="menuBarItemStackedNoteThreshold" horizontalAlign="right" width="100%" min="0" max="50" step="5"/>
-    </hbox>
-    <menu-separator />
     <menu text="Note Snapping">
       <menu-item id="menuBarItemNoteSnapDecrease" text="Decrease Note Snap Precision" shortcutText="Left Arrow" />
       <menu-item id="menuBarItemNoteSnapIncrease" text="Increase Note Snap Precision" shortcutText="Right Arrow" />
@@ -56,8 +51,6 @@
   </menu>
   <menu text="View">
     <menu-checkbox id="menubarItemDownscroll" text="Downscroll" disabled="true" />
-    <menu-item id="menubarItemZoomIn" text="Zoom In" disabled="true" />
-    <menu-item id="menubarItemZoomOut" text="Zoom out" disabled="true" />
     <menu text="Theme">
       <menu-option-box id="menuBarItemThemeLight" text="Light" group="menubarItemThemeGroup" selected="true" />
       <menu-option-box id="menuBarItemThemeDark" text="Dark" group="menubarItemThemeGroup" />
@@ -138,5 +131,5 @@
     <menu-item id="menubarItemAbout" text="About..." />
   </menu>
   <spacer width="100%" />
-  <label text="Chart Editor (Functionality is subject to change.)" verticalAlign="center" />
+  <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
 </menubar>

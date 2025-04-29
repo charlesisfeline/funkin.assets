@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<dialog width="800" height="500" title="Welcome to the Chart Editor!">
+<dialog width="800" height="500" title="Chart Editor - New Song">
 	<!-- Body -->
 	<hbox width="100%" height="100%">
 		<card id="splashSectionLeft" width="25%" height="100%" text="Open Recent">
@@ -16,12 +16,11 @@
 			</card>
 			<card id="splashSectionCenter" width="100%" height="50%" text="Import Chart">
 				<link id="splashImportChartLegacy" width="100%" text="FNF Legacy" />
-				<link id="splashImportChartKadeEngine" width="100%" text="Kade Engine (1.6+)" disabled="true" />
 				<link id="splashImportChartOsuMania" width="100%" text="Osu!Mania" disabled="true" />
 				<link id="splashImportChartStepMania" width="100%" text="StepMania" disabled="true" />
 			</card>
 		</vbox>
-		<card id="splashSectionRight" width="25%" height="100%" text="Create from Song">
+		<card id="splashSectionRight" width="25%" height="100%" text="Create From Song">
 			<scrollview width="100%" height="100%" contentWidth="100%">
 				<vbox width="100%" id="splashTemplateContainer" />
 			</scrollview>

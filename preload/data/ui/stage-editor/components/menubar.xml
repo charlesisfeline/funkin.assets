@@ -26,20 +26,39 @@
     <menu-item id="menubarItemSelectRegion" text="Select Region" shortcutText="Tab" disabled="true" />
     <menu-item id="menubarItemSelectBeforeCursor" text="Select Before Cursor" shortcutText="Shift+Home" disabled="true" />
     <menu-item id="menubarItemSelectAfterCursor" text="Select After Cursor" shortcutText="Shift+End" disabled="true" />
+    <menu-separator />
+    <menu text="Input Style" disabled="true">
+      <menuoptionbox id="menuBarItemInputStyleNone" text="None" group="menubarItemInputStyleGroup" selected="true" disabled="true" />
+      <menuoptionbox id="menuBarItemInputStyleNumberKeys" text="Number Keys" group="menubarItemInputStyleGroup" disabled="true" />
+      <menuoptionbox id="menuBarItemInputStyleWASD" text="WASD + Arrows" group="menubarItemInputStyleGroup" disabled="true" />
+      <menuoptionbox id="menuBarItemInputStyleDFJK" text="ASDF + JKL;" group="menubarItemInputStyleGroup" disabled="true" />
+    </menu>
   </menu>
   <menu text="View">
+    <menu-checkbox id="menubarItemDownscroll" text="Downscroll" disabled="true" />
     <menu text="Theme">
       <menuoptionbox id="menuBarItemThemeLight" text="Light" group="menubarItemThemeGroup" selected="true" />
       <menuoptionbox id="menuBarItemThemeDark" text="Dark" group="menubarItemThemeGroup" />
     </menu>
   </menu>
   <menu text="Audio">
-    <label id="menubarItemNope" text="No." />
+    <menu-checkbox id="menubarItemMetronomeEnabled" text="Enable Metronome" />
+    <menu-checkbox id="menubarItemPlayerHitsounds" text="Enable Player Note Sounds" />
+    <menu-checkbox id="menubarItemOpponentHitsounds" text="Enable Opponent Note Sounds" />
+    <menu-separator />
+    <vbox width="100%" style="padding: 5px;">
+      <label id="menubarLabelVolumeInstrumental" text="Instrumental - 100%" />
+      <slider id="menubarItemVolumeInstrumental" width="100%" majorTicks="10" minorTicks="5" pos="100" />
+      <label id="menubarLabelVolumeVocals" text="Vocal Volume - 100%" />
+      <slider id="menubarItemVolumeVocals" width="100%" majorTicks="10" minorTicks="5" pos="100" />
+      <label id="menubarLabelPlaybackSpeed" text="Playback Speed - 100%" />
+      <slider id="menubarItemPlaybackSpeed" width="100%" majorTicks="10" minorTicks="5" pos="50" />
+    </vbox>
   </menu>
   <menu text="Help">
     <menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
     <menu-item id="menubarItemAbout" text="About..." />
   </menu>
   <spacer width="100%" />
-  <label text="Stage Editor (Functionality is subject to change.)" verticalAlign="center" />
+  <label text="PROTOTYPE Functionality is subject to change." verticalAlign="center" />
 </menubar>

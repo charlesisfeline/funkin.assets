@@ -375,13 +375,20 @@ class PhillyStreetsStage extends Stage
 	{
 		super.onUpdate(event);
 
-		var remappedIntensityValue:Float = rainShaderStartIntensity;
-		if (FlxG.sound.music != null) {
-			remappedIntensityValue = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music.length, rainShaderStartIntensity, rainShaderEndIntensity);
+		if (FlxG.sound.music != null)
+		{
+			var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music.length, rainShaderStartIntensity, rainShaderEndIntensity);
+			rainShader.intensity = remappedIntensityValue;
+			rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+			rainShader.update(event.elapsed);
 		}
-		rainShader.intensity = remappedIntensityValue;
-		rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
-		rainShader.update(event.elapsed);
+		else
+		{
+			rainShader.intensity = rainShaderStartIntensity;
+			rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+			rainShader.update(event.elapsed);
+		}
+
 
 		if(scrollingSky != null) scrollingSky.scrollX -= FlxG.elapsed * 22;
 

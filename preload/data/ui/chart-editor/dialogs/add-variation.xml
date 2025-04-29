@@ -35,18 +35,12 @@
 							<item id="Pixel" text="Pixel" />
 						</data>
 					</dropdown>
-				<label text="Album:" verticalAlign="center" horizontalAlign="right" />
-				<dropdown id="dialogAlbum" value="placeholding" horizontalAlign="right" width="100%">
-					<data>
-						<item id="" text="placeholder" />
-					</data>
-				</dropdown>
 					<label text="Player Character:" verticalAlign="center" horizontalAlign="right" />
 					<dropdown id="dialogCharacterPlayer" value="bf" horizontalAlign="right" width="100%">
 						<validator type="required" />
 						<data>
 							<item id="bf" text="Boyfriend" />
-							<item id="pico-playable" text="Pico (Playable)" />
+							<item id="pico-playable" text="Pico (Darnell)" />
 						</data>
 					</dropdown>
 					<label text="Opponent Character:" verticalAlign="center" horizontalAlign="right" />
@@ -66,7 +60,7 @@
 						</data>
 					</dropdown>
 					<label text="Starting BPM:" verticalAlign="center" style="font-size: 10px" horizontalAlign="right" />
-					<number-stepper id="dialogBPM" style="font-size: 10px" pos="100" step="1" min="10" max="9999" precision="1" horizontalAlign="right" width="100%" validator="required" />
+					<number-stepper id="dialogBPM" style="font-size: 10px" pos="100" step="1" min="10" max="500" precision="1" horizontalAlign="right" width="100%" validator="required" />
 				</grid>
 			</vbox>
 		</form>

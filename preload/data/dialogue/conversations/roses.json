@@ -7,6 +7,12 @@
     "color": "#BFB3DFD8"
   },
 
+  "music": {
+    "asset": "",
+    "fadeTime": 0,
+    "looped": false
+  },
+
   "outro": {
     "type": "fade",
     "fadeTime": 1.0
