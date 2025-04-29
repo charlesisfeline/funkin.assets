@@ -9,7 +9,6 @@ class ParentsChristmasCharacter extends SparrowCharacter {
 
 	function onNoteHit(event:HitNoteScriptEvent)
 	{
-		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD) {
 			// Override the hit note animation.
 			switch(event.note.kind) {
 				case "mom":
@@ -17,7 +16,6 @@ class ParentsChristmasCharacter extends SparrowCharacter {
 					this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
 					return;
 			}
-		}
 
 		super.onNoteHit(event);
 	}

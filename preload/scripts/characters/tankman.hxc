@@ -11,7 +11,6 @@ class TankmanCharacter extends MultiSparrowCharacter {
 	{
 		super.onNoteHit(event);
 
-		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD) {
 			// Override the hit note animation.
 			switch(event.note.kind) {
 				case "ugh":
@@ -23,6 +22,5 @@ class TankmanCharacter extends MultiSparrowCharacter {
 					this.playAnimation('hehPrettyGood', true, true);
 					return;
 			}
-		}
 	}
 }

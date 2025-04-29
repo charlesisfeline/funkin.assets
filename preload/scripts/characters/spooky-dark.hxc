@@ -31,7 +31,6 @@ class SpookyDarkCharacter extends SparrowCharacter {
 	{
 		super.onNoteHit(event);
 
-		if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD) {
 			// Override the hit note animation.
 			switch(event.note.kind) {
 				case "cheer":
@@ -39,7 +38,6 @@ class SpookyDarkCharacter extends SparrowCharacter {
 					this.playAnimation('cheer', true, true);
 					return;
 			}
-		}
 	}
 
 	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
