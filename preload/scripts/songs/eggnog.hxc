@@ -126,7 +126,7 @@ class EggnogSong extends Song
 
     parentsShoot.scriptCall('playCutscene');
 
-		//FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1);
+		FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1);
 
 		PlayState.instance.isInCutscene = true;
 		hasPlayedCutscene = true;
@@ -135,7 +135,6 @@ class EggnogSong extends Song
 		PlayState.instance.currentStage.getDad().danceEvery = 0;
 
     PlayState.instance.tweenCameraToPosition(santaDead.x + 300, santaDead.y, 2.8, FlxEase.expoOut);
-		//PlayState.instance.tweenCameraToPosition(santaDead.x + 300, santaDead.y, 2.8, FlxEase.expoOut);
 		PlayState.instance.tweenCameraZoom(0.73, 2, true, FlxEase.quadInOut);
 
 		santaSound = FunkinSound.load(Paths.sound('santa_emotion'), 1);
