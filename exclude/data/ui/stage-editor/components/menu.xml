@@ -48,7 +48,9 @@
   </menu>
 
   <menu text="Windows" id="menubarMenuWindow">
-    <menu-checkbox id="menubarItemWindowObject" text="Object Properties"/>
+    <menu-checkbox id="menubarItemWindowObjectGraphic" text="Object Graphic"/>
+    <menu-checkbox id="menubarItemWindowObjectAnims" text="Object Animations"/>
+    <menu-checkbox id="menubarItemWindowObjectProps" text="Object Properties"/>
     <menu-checkbox id="menubarItemWindowCharacter" text="Character Properties"/>
     <menu-checkbox id="menubarItemWindowStage" text="Stage Data Settings"/>
   </menu>

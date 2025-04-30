@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<dialog title="Are you sure?">
-  <image resource="shared:assets/shared/images/ui/stage-editor/probably.png" imageScale=".25"/>
+<dialog width="500" title="About">
+	<vbox width="100%">
+		<label text="Friday Night Funkin'" horizontalAlign="center" />
+		<label text="Stage Editor v1" horizontalAlign="center" />
+		<label text="Built by KoloInDaCrib" horizontalAlign="center" />
+		<label text="HaxeUI by Ian Harrigan" horizontalAlign="center" />
+	</vbox>
 </dialog>
