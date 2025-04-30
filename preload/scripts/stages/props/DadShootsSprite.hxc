@@ -20,8 +20,6 @@ class DadShootsSprite extends FlxAtlasSprite
       Antialiasing: true,
       ScrollFactor: new FlxPoint(1, 1),
     });
-
-   // onAnimationFinish.add(finishCanAnimation);
   }
 
   public function playCutscene():Void {
