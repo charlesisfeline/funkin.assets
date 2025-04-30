@@ -22,7 +22,7 @@ class PicoDopplegangerSprite extends FlxAtlasSprite
       Reversed: false,
       // ?OnComplete:Void -> Void,
       ShowPivot: false,
-      Antialiasing: Preferences.antialiasing,
+      Antialiasing: true,
       ScrollFactor: new FlxPoint(1, 1),
     });
   }

@@ -3,7 +3,6 @@ import flixel.math.FlxPoint;
 import flixel.FlxSprite;
 import funkin.graphics.FunkinSprite;
 import funkin.play.PlayState;
-import funkin.Preferences;
 
 class SpraycanAtlasSprite extends FlxAtlasSprite
 {
@@ -20,7 +19,7 @@ class SpraycanAtlasSprite extends FlxAtlasSprite
       Reversed: false,
       // ?OnComplete:Void -> Void,
       ShowPivot: false,
-      Antialiasing: Preferences.antialiasing,
+      Antialiasing: true,
       ScrollFactor: new FlxPoint(1, 1),
     });
 
