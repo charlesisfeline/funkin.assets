@@ -514,6 +514,14 @@ class PhillyTrainErectStage extends Stage
 		startedMoving = false;
 	}
 
+	/**
+	 * Make sure the train is reset when the song restarts.
+	 */
+	 function onSongRetry(event:ScriptEvent) {
+		super.onSongRetry(event);
+		trainReset();
+	}
+
 	function kill()
 	{
 		super.kill();
