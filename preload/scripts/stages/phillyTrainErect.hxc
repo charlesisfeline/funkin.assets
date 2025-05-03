@@ -517,12 +517,19 @@ class PhillyTrainErectStage extends Stage
 		startedMoving = false;
 	}
 
-	/**
-	 * Make sure the train is reset when the song restarts.
-	 */
-	 function onSongRetry(event:ScriptEvent) {
+	function onSongRetry(event:ScriptEvent) {
 		super.onSongRetry(event);
 		trainReset();
+	}
+
+	public override function onSongEnd(event:CountdownScriptEvent):Void {
+		super.onSongEnd(event);
+		// Disable train movement sfx during song ending.
+		trainMoving = false;
+		if (trainSound != null) {
+			trainSound.stop();
+			trainSound = null;
+		}
 	}
 
 	function kill()
