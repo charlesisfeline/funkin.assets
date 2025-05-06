@@ -355,9 +355,6 @@ class PicoPlayerCharacter extends MultiSparrowCharacter {
 
 	function onUpdate(event:ScriptEvent) {
 		super.onUpdate(event);
-
-		if (deathSpriteRetry != null)
-			trace('deathSpriteRetry: ' + deathSpriteRetry.visible + ' (' + deathSpriteRetry.x + ', ' + deathSpriteRetry.y + ')');
 	}
 
 	function addToStage(sprite:FlxSprite) {

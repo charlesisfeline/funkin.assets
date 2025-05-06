@@ -68,7 +68,6 @@ class PicoChristmasCharacter extends MultiSparrowCharacter {
 			// Standard death animation.
 			createDeathSprites();
 
-			trace('Adding death sprites...');
 			GameOverSubState.instance.add(deathSpriteRetry);
 			GameOverSubState.instance.add(deathSpriteNene);
 			GameOverSubState.instance.refresh();

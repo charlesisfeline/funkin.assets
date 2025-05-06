@@ -226,7 +226,6 @@ class NeneCharacter extends MultiSparrowCharacter {
 
 	function movePupilsLeft():Void {
 		if (pupilState == PUPIL_STATE_LEFT) return;
-		trace('Move pupils left');
 		pupil.playAnimation('');
 		pupil.anim.curFrame = 0;
 		// pupilState = PUPIL_STATE_LEFT;
@@ -234,7 +233,6 @@ class NeneCharacter extends MultiSparrowCharacter {
 
 	function movePupilsRight():Void {
 		if (pupilState == PUPIL_STATE_NORMAL) return;
-		trace('Move pupils right');
 		pupil.playAnimation('');
 		pupil.anim.curFrame = 17;
 		// pupilState = PUPIL_STATE_NORMAL;
@@ -290,7 +288,6 @@ class NeneCharacter extends MultiSparrowCharacter {
 				case PUPIL_STATE_NORMAL:
 					if (pupil.anim.curFrame >= 17)
 					{
-						trace('Done moving pupils left');
 						pupilState = PUPIL_STATE_LEFT;
 						pupil.anim.pause();
 					}
@@ -298,7 +295,6 @@ class NeneCharacter extends MultiSparrowCharacter {
 				case PUPIL_STATE_LEFT:
 					if (pupil.anim.curFrame >= 30)
 					{
-						trace('Done moving pupils right');
 						pupilState = PUPIL_STATE_NORMAL;
 						pupil.anim.pause();
 					}
