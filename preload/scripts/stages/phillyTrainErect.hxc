@@ -220,7 +220,10 @@ class PhillyTrainErectStage extends Stage
 			// cutting off skipping here. really dont think its needed after this point and it saves problems from happening
 			PlayState.instance.cameraFollowPoint.setPosition(cigarettePos[0], cigarettePos[1]);
 			if(explode == true)
+			{
 				PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true);
+			  FunkinSound.playOnce(Paths.sound('cutscene/nene_laugh'), 0.72);
+			}
 		});
 
 		new FlxTimer(cutsceneTimerManager).start(11.2, _ -> {
