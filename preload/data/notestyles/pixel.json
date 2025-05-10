@@ -18,7 +18,7 @@
     "noteStrumline": {
       "assetPath": "shared:notestyles/pixel/arrows-pixels",
       "scale": 6.0,
-      "offsets": [28, 40],
+      "offsets": [28, 32],
       "isPixel": true,
       "data": {
         "leftStatic": { "prefix": "staticLeft0" },
@@ -42,7 +42,7 @@
     "holdNote": {
       "assetPath": "shared:notestyles/pixel/arrowEndsNew",
       "scale": 6.0,
-      "offsets": [2, -8],
+      "offsets": [2, 1],
       "isPixel": true,
       "data": {}
     },
@@ -83,7 +83,7 @@
       "assetPath": "shared:notestyles/pixel/pixelNoteHoldCover",
       "scale": 6.0,
       "isPixel": true,
-      "offsets": [29, -2.5],
+      "offsets": [29, -4],
       "data": {
         "enabled": true,
         "left": {

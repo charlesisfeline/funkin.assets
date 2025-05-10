@@ -17,7 +17,7 @@
     "noteStrumline": {
       "assetPath": "shared:notestyles/funkin/noteStrumline",
       "scale": 0.7,
-      "offsets": [0, 9],
+      "offsets": [0, 0],
       "data": {
         "leftStatic": { "prefix": "staticLeft0" },
         "leftPress": { "prefix": "pressLeft0" },
@@ -40,7 +40,6 @@
     "holdNote": {
       "assetPath": "shared:notestyles/funkin/NOTE_hold_assets",
       "scale": 0.7,
-      "offsets": [0, -9],
       "data": {}
     },
     "noteSplash": {
@@ -68,7 +67,7 @@
     },
     "holdNoteCover": {
       "assetPath": "",
-      "offsets": [0, 9],
+      "offsets": [0, 0],
       "data": {
         "enabled": true,
         "left": {
