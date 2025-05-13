@@ -2,6 +2,7 @@ import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.math.FlxPoint;
 import flixel.FlxG;
 import funkin.graphics.FunkinSprite;
+import funkin.play.ResultState;
 import funkin.Preferences;
 
 class PicoGoodResults extends FlxAtlasSprite
@@ -27,16 +28,11 @@ class PicoGoodResults extends FlxAtlasSprite
     var whiteFlash:FunkinSprite = new FunkinSprite(0, 0).makeSolidColor(FlxG.width, FlxG.height, 0x33FFFFFF);
     var blackFlash:FunkinSprite = new FunkinSprite(0, 0).makeSolidColor(FlxG.width, FlxG.height, 0x33000000);
 
-    var resultState:ResultState = FlxG.state;
-    while (resultState.subState != null) {
-      resultState = resultState.subState;
-    }
-
-    resultState.add(whiteFlash);
+    ResultState.instance.add(whiteFlash);
     whiteFlash.zIndex = 1000;
     whiteFlash.visible = false;
 
-    resultState.add(blackFlash);
+    ResultState.instance.add(blackFlash);
     blackFlash.zIndex = 1000;
     blackFlash.visible = false;
 
@@ -100,16 +96,13 @@ class PicoGoodResults extends FlxAtlasSprite
   override function update(elapsed:Float):Void {
     super.update(elapsed);
 
-    trace('PicoGoodResults.update()');
     FlxG.watch.addQuick('picoResultsPos', this.offset);
 
-    var resultState:ResultState = FlxG.state;
-    while (resultState.subState != null) {
-      resultState = resultState.subState;
+    if (ResultState.instance != null)
+    {
+      FlxG.watch.addQuick('cameraBG', new FlxPoint(ResultState.instance.cameraBG.x, ResultState.instance.cameraBG.y));
+      FlxG.watch.addQuick('cameraScroll', new FlxPoint(ResultState.instance.cameraScroll.x, ResultState.instance.cameraScroll.y));
+      FlxG.watch.addQuick('cameraEverything', new FlxPoint(ResultState.instance.cameraEverything.x, ResultState.instance.cameraEverything.y));
     }
-
-    FlxG.watch.addQuick('cameraBG', new FlxPoint(resultState.cameraBG.x, resultState.cameraBG.y));
-    FlxG.watch.addQuick('cameraScroll', new FlxPoint(resultState.cameraScroll.x, resultState.cameraScroll.y));
-    FlxG.watch.addQuick('cameraEverything', new FlxPoint(resultState.cameraEverything.x, resultState.cameraEverything.y));
   }
 }
