@@ -1,0 +1,31 @@
+import funkin.play.notes.notekind.NoteKind;
+
+class JointNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('sakura-joint', 'Joint (Le Sserafim)');
+
+    // NOTE: Implemented in sserafim-sakura.hxc
+  }
+}
+
+class BfSingsNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('sakura-bf1', 'BF Sings (Le Sserafim)');
+
+    // NOTE: Implemented in sserafim-sakura.hxc
+  }
+}
+
+class BfSingsAltNoteKind extends NoteKind
+{
+  public function new()
+  {
+    super('sakura-bf2', 'BF Sings (Alternate) (Le Sserafim)');
+
+    // NOTE: Implemented in sserafim-sakura.hxc
+  }
+}
